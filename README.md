@@ -1,51 +1,57 @@
-### **Escopo do Projeto**
+### **Blog de Receitas para Restaurante**
 
-**Funcionalidades Principais:**
-1. **Autenticação e Autorização:**
-   - Registro e login de usuários usando JWT.
-   - Gerenciamento de perfil do usuário.
+#### **Objetivo:**
 
-2. **Gerenciamento de Eventos:**
-   - Criação, edição, visualização e exclusão de eventos.
-   - Listagem e pesquisa de eventos.
-
-3. **Inscrição em Eventos:**
-   - Inscrição e cancelamento de inscrição em eventos. Disponível para todos, incluindo usuários não autenticados.
-   - Visualização dos eventos em que o usuário está inscrito. Disponível apenas para usuários autenticados.
-
-4. **Notificações:**
-   - Envio de lembretes e atualizações sobre eventos.
-
-5. **Interface de Administração (Opcional):**
-   - Painel para gerenciar eventos e visualizar inscrições.
+Desenvolver uma plataforma onde usuários verificados possam cadastrar suas receitas, que serão avaliadas pela cozinha do restaurante. A receita com a melhor avaliação será incluída no menu do restaurante.
 
 ---
 
-### **Funcionalidades Adicionais:**
+### **Por que Este Projeto?**
 
-1. **Inscrição Aberta para Qualquer Pessoa:**
-   - **Descrição:** Qualquer pessoa, mesmo não autenticada, pode se inscrever em eventos disponíveis. No entanto, para gerenciar suas inscrições e visualizar eventos nos quais está inscrito, o usuário precisa estar autenticado.
+Este projeto permite uma interação direta entre o restaurante e seus clientes, oferecendo uma oportunidade para os clientes verem suas criações no menu. A plataforma possibilita que o restaurante inove constantemente, incorporando novas receitas e mantendo o engajamento com os clientes.
 
-2. **Visualização dos Eventos em que o Usuário Está Inscrito:**
-   - **Descrição:** Usuários autenticados podem visualizar uma lista dos eventos nos quais estão inscritos em seu perfil.
+---
+
+### **Escopo do Projeto**
+
+**Funcionalidades Principais:**
+1. **Autenticação e Verificação de Usuários:**
+   - Registro e login de usuários.
+   - Verificação de usuários (por exemplo, envio de documentos para serem aprovados pelo administrador).
+
+2. **Cadastro de Receitas:**
+   - Usuários verificados podem cadastrar receitas, com título, descrição, ingredientes, e modo de preparo.
+   - Upload de fotos das receitas.
+
+3. **Avaliação das Receitas:**
+   - Receitas cadastradas são enviadas para a cozinha do restaurante para avaliação.
+   - As receitas podem ser avaliadas por uma equipe da cozinha usando um sistema de classificação (estrelas ou notas).
+
+4. **Seleção de Receita Vencedora:**
+   - A receita com a melhor avaliação será destacada e poderá ser incluída no menu do restaurante.
+   - O processo de avaliação pode ser visualizado no perfil do usuário.
+
+5. **Administração:**
+   - Administrador gerencia as receitas cadastradas e os usuários.
+   - Pode aprovar ou rejeitar receitas.
 
 ---
 
 ### **Objetivos SMART**
 
-1. **Específico:** Desenvolver uma aplicação web para gestão de eventos que permita a criação, visualização e inscrição em eventos, com funcionalidades de autenticação e gerenciamento de usuários.
+1. **Específico:** Desenvolver uma plataforma onde usuários verificados possam enviar receitas e a cozinha do restaurante possa avaliá-las.
    
-2. **Mensurável:** A aplicação deve ter pelo menos 80% das funcionalidades testadas e funcionando corretamente, incluindo CRUD de eventos, gerenciamento de inscrições e autenticação de usuários.
+2. **Mensurável:** A aplicação deve permitir pelo menos 100 usuários verificados cadastrarem receitas e deve exibir as receitas com avaliação da equipe da cozinha.
 
-3. **Atingível:** Utilizar Node.js, React, MongoDB e JWT para construir a aplicação. O desenvolvimento será realizado em um ambiente de trabalho colaborativo com um cronograma definido.
+3. **Atingível:** Utilizar Node.js para o backend, React para o frontend, MongoDB para o banco de dados e JWT para autenticação de usuários.
 
-4. **Relevante:** A aplicação atende à necessidade de gerenciar eventos de forma eficiente e segura, o que é um requisito comum para muitas organizações e indivíduos.
+4. **Relevante:** A aplicação oferece uma maneira inovadora para o restaurante descobrir novos pratos, fortalecendo a relação com seus clientes.
 
-5. **Temporal:** Concluir o projeto em 8 semanas, com fases de desenvolvimento, testes e ajustes finais.
+5. **Temporal:** Concluir o projeto em 8 semanas.
 
 ---
 
-### **Cronograma - Diagrama de Gantt**
+### **Cronograma**
 
 **Semana 1:**
 - Planejamento e definição de requisitos.
@@ -56,23 +62,23 @@
 - Configuração do banco de dados (MongoDB).
 
 **Semana 3:**
-- Implementação da autenticação e autorização (JWT).
-- Desenvolvimento das rotas principais para eventos e usuários.
+- Implementação da autenticação e verificação de usuários.
+- Desenvolvimento de rotas de receitas e usuários.
 
 **Semana 4:**
-- Desenvolvimento do frontend (React) - estrutura inicial e páginas principais.
-- Integração frontend com backend.
+- Desenvolvimento do frontend (React).
+- Integração frontend-backend.
 
 **Semana 5:**
-- Implementação das funcionalidades de inscrição e gerenciamento de eventos.
-- Desenvolvimento de notificações e lembretes.
+- Implementação do sistema de cadastro de receitas.
+- Desenvolvimento de sistema de avaliação pela equipe da cozinha.
 
 **Semana 6:**
 - Testes unitários e integração.
 - Ajustes baseados nos testes.
 
 **Semana 7:**
-- Prototipagem final e ajustes na UI/UX.
+- Refinamento da interface de usuário (UI/UX).
 - Preparação para deploy.
 
 **Semana 8:**
@@ -83,75 +89,17 @@
 
 ### **Análise de Risco e Mitigação**
 
-1. **Problemas de Autenticação:**
-   - **Risco:** Falhas na autenticação podem impedir o acesso dos usuários à aplicação ou comprometer a segurança.
-   - **Mitigação:**
-     - **Uso de Bibliotecas Confiáveis:** Utilizar bibliotecas bem estabelecidas para autenticação e criptografia, como jsonwebtoken para JWT e bcrypt para hash de senhas.
-     - **Testes Abrangentes:** Implementar testes unitários e de integração para verificar a robustez da autenticação e autorização.
-     - **Implementação de Protocolos de Segurança:** Garantir que o processo de login e registro esteja protegido contra ataques como força bruta e injeção SQL.
+1. **Problemas de Verificação de Usuários:**
+   - **Risco:** Falhas na verificação podem permitir o envio de receitas de usuários não autorizados.
+   - **Mitigação:** Implementar um sistema rigoroso de verificação de documentos e aprovação por administrador.
 
 2. **Problemas de Performance:**
-   - **Risco:** A aplicação pode enfrentar lentidão ou falhas se não for otimizada corretamente, especialmente com um grande número de usuários ou eventos.
-   - **Mitigação:**
-     - **Otimização de Consultas:** Utilizar índices adequados no MongoDB para melhorar a performance das consultas.
-     - **Cache de Dados:** Implementar caching para dados que não mudam frequentemente, usando soluções como Redis.
-     - **Análise de Performance:** Monitorar a performance da aplicação e identificar gargalos usando ferramentas como New Relic ou o módulo performance do Node.js.
+   - **Risco:** Com muitas receitas e usuários, o sistema pode se tornar lento.
+   - **Mitigação:** Otimizar o banco de dados e implementar caching de dados.
 
 3. **Segurança:**
-   - **Risco:** Vulnerabilidades na aplicação podem expor dados sensíveis ou permitir acessos não autorizados.
-   - **Mitigação:**
-     - **Validação de Dados:** Implementar validação robusta de entradas no frontend e backend para prevenir injeções e ataques de XSS.
-     - **Criptografia de Dados Sensíveis:** Utilizar criptografia para dados sensíveis, como senhas e informações pessoais.
-     - **Auditoria e Monitoramento:** Realizar auditorias de segurança e monitorar logs para detectar e responder rapidamente a atividades suspeitas.
-
-4. **Integração Frontend e Backend:**
-   - **Risco:** Problemas na integração entre frontend e backend podem resultar em falhas na comunicação ou em funcionalidades quebradas.
-   - **Mitigação:**
-     - **Desenvolvimento Ágil e Iterativo:** Trabalhar em ciclos curtos de desenvolvimento e integração contínua para detectar e corrigir problemas rapidamente.
-     - **Documentação de API:** Criar e manter uma documentação clara e detalhada das APIs utilizando ferramentas como Swagger ou Postman.
-     - **Testes de Integração:** Implementar testes de integração para verificar se o frontend e backend estão funcionando corretamente juntos.
-
-5. **Gerenciamento de Dependências:**
-   - **Risco:** Dependências desatualizadas ou conflitantes podem introduzir vulnerabilidades ou bugs na aplicação.
-   - **Mitigação:**
-     - **Atualizações Regulares:** Manter todas as dependências atualizadas e utilizar ferramentas como npm audit para identificar e corrigir vulnerabilidades.
-     - **Controle de Versões:** Utilizar um gerenciador de pacotes e especificar versões exatas das dependências no arquivo package.json para evitar conflitos.
-     - **Testes Automatizados:** Implementar uma suíte de testes automatizados para garantir que atualizações nas dependências não quebrem funcionalidades existentes.
-
-6. **Problemas de Usabilidade:**
-   - **Risco:** A aplicação pode não ser intuitiva ou fácil de usar, impactando negativamente a experiência do usuário.
-   - **Mitigação:**
-     - **Prototipagem e Testes de Usabilidade:** Criar protótipos e realizar testes com usuários para identificar e resolver problemas de usabilidade antes do desenvolvimento final.
-     - **Feedback Contínuo:** Coletar feedback dos usuários e realizar melhorias contínuas com base nas necessidades e sugestões deles.
-     - **Design Responsivo:** Garantir que a interface seja responsiva e funcione bem em diferentes dispositivos e tamanhos de tela.
-
-7. **Problemas de Escalabilidade:**
-   - **Risco:** A aplicação pode ter dificuldades para escalar e suportar um número crescente de usuários e eventos.
-   - **Mitigação:**
-     - **Arquitetura Escalável:** Projetar a aplicação com uma arquitetura escalável, como o uso de microservices ou containers (Docker).
-     - **Monitoramento e Planejamento:** Monitorar o desempenho da aplicação e planejar a escalabilidade horizontal (adicionando mais instâncias) e vertical (aumentando os recursos das instâncias existentes).
-     - **Load Balancing:** Implementar balanceamento de carga para distribuir o tráfego de usuários de maneira eficiente.
-
----
-
-### **Recursos**
-
-1. **Equipe:**
-   - Desenvolvedor Backend (Node.js)
-   - Desenvolvedor Frontend (React)
-   - Designer UI/UX (opcional)
-   - Testador (opcional)
-
-2. **Tecnologias:**
-   - Node.js, Express, MongoDB, JWT
-   - React, Axios
-   - Mongoose, Bcrypt
-
-3. **Ferramentas:**
-   - GitHub para controle de versão.
-   - Trello ou Jira para gerenciamento de tarefas.
-   - Postman para testes de API.
-   - Heroku ou Vercel para deploy (opcional).
+   - **Risco:** Vulnerabilidades podem expor dados sensíveis dos usuários.
+   - **Mitigação:** Usar criptografia para dados sensíveis e aplicar boas práticas de segurança como validação de entradas.
 
 ---
 
@@ -173,4 +121,4 @@
 
 ## Prototipos
 
-![Diagrama de Fluxo](Prototipos/Master_Prato.PNG)
+![Diagrama de Fluxo](Prototipos/MasterPrato.PNG)
