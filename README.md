@@ -121,4 +121,4 @@ Este projeto permite uma interação direta entre o restaurante e seus clientes,
 
 ## Prototipos
 
-![Diagrama de Fluxo](Prototipos/MasterPrato.PNG)
+![Prototipos](Prototipos/Master_Prato.PNG)
