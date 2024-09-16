@@ -1,3 +1,11 @@
+### **Contexto do Projeto** ###
+**Tema:**
+        Blog de receitas para Restaurante
+**Contexto**:
+        Somos um restaurante inovador buscando por novos pratos feitos pelo Usuário, para isso gostaríamos de uma plataforma onde os Usuários verificados podem cadastrar suas receitas para serem testadas e avaliadas pela nossa cozinha. O prato com melhor avaliação será incluído no nosso menu.
+
+---
+
 ### **Blog de Receitas para Restaurante**
 
 #### **Objetivo:**
