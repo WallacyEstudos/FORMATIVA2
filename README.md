@@ -1,8 +1,6 @@
 ### **Contexto do Projeto** ###
-**Tema:**
-        Blog de receitas para Restaurante
-**Contexto**:
-        Somos um restaurante inovador buscando por novos pratos feitos pelo Usuário, para isso gostaríamos de uma plataforma onde os Usuários verificados podem cadastrar suas receitas para serem testadas e avaliadas pela nossa cozinha. O prato com melhor avaliação será incluído no nosso menu.
+**Sistema de Gestão de Eventos:**
+O Sistema de Gestão de Eventos é uma aplicação prática e útil que pode ser implementada para uma variedade de contextos, desde pequenos eventos comunitários até grandes conferências. Este projeto permite aplicar conhecimentos de desenvolvimento web moderno, incluindo criação de APIs com Node.js, construção de interfaces com React, gerenciamento de dados com MongoDB e segurança com JWT. A experiência adquirida pode ser aplicada em contextos profissionais reais e em projetos futuros.
 
 ---
 
